@@ -1,0 +1,8 @@
+name: traffmonetizer
+services:
+  cli_v2:
+    container_name: Traffmonetizer-192.168.1.55
+    image: traffmonetizer/cli_v2
+    restart: always
+    command: start accept --token m3s8mVrdni4R4GPPuHDbDQF8CdpUyPQ7hcxDj1r8sUQ=
+networks: {}

@@ -1,0 +1,16 @@
+# compose.yaml
+
+version: "3.8"
+services:
+  wxedge:
+    image: onething1/wxedge
+    volumes:
+      - /mnt/wxedge:/storage:rw
+    tmpfs:
+      - /tmp
+      - /run
+    privileged: true
+    restart: always
+    container_name: wxedge-192.168.1.55
+    ports:
+      - 18888:18888
