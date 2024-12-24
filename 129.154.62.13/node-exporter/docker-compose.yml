@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  node-exporter:
+    container_name: node-exporter-192.168.1.55
+    ports:
+        - 9100:9100
+    restart: always
+    volumes:
+        - /proc:/host/proc:ro
+        - /sys:/host/sys:ro
+        - /:/rootfs:ro
+    image: prom/node-exporter:latest
+volumes:
+    node-data:
+        external: true
+        name: node-data
